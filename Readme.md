@@ -83,7 +83,14 @@ La relacion entre el Persistence Unit y un Entity Manager Factory es de uno a un
 * @PreUpdate
 * @PostUpdate
 * @PreRemove
-* PostRemove
+* @PostRemove
+* @PreLoad
+* @PostLoad
+### Eventos implementados desde un Listener.
+
+1. Crear un paquete para los listeners 
+2. Crear una clase Listener
+3. Enlazar la entidad con el listener con la anotacion `@EntityListeners({ClaseListener.class})`
 
 
 ## CREAR UN PROYECTO JAVA CON JPA 

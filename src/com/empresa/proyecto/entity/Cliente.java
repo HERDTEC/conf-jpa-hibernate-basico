@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,7 +13,10 @@ import javax.persistence.PostPersist;
 import javax.persistence.PostRemove;
 import javax.persistence.PostUpdate;
 
+import com.empresa.proyecto.listeners.MonitoreoListener;
+
 @Entity
+@EntityListeners({MonitoreoListener.class})
 public class Cliente implements Serializable {
 	 /**
 	 * 

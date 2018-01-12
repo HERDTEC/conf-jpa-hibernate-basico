@@ -17,11 +17,11 @@ public class AppCliente {
 
 	public static void main(String[] args) {
 		emf = Persistence.createEntityManagerFactory("JPA_AppJpaHibernatePU");
-		// registrar();
+		 registrar();
 		// listar();
 		// buscar(7);
 		// eliminar(5);  listar();
-		 actualizar(7, "Andrea", "Fonseca"); //listar();
+		// actualizar(7, "Andrea", "Fonseca"); //listar();
 		System.out.println("Fin");
 	}
 
