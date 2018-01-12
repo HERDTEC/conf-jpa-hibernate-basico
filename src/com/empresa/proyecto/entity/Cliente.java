@@ -2,11 +2,15 @@ package com.empresa.proyecto.entity;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PostPersist;
+import javax.persistence.PostRemove;
+import javax.persistence.PostUpdate;
 
 @Entity
 public class Cliente implements Serializable {
@@ -54,6 +58,13 @@ public class Cliente implements Serializable {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
-	 
+	@PostPersist
+	@PostUpdate
+	@PostRemove
+	private void getUltimaFechaSincronizacion() {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss SSSS");
+		System.out.println("Callback Metodo getUltimaFechaSincronizacion\n"+simpleDateFormat.format(new Date(System.currentTimeMillis())));
+	}
+
 	 
 }

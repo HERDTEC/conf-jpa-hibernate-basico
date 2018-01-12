@@ -16,12 +16,12 @@ public class AppCliente {
 	private static EntityManagerFactory emf;
 
 	public static void main(String[] args) {
-		emf = Persistence.createEntityManagerFactory("test1jp");
+		emf = Persistence.createEntityManagerFactory("JPA_AppJpaHibernatePU");
 		// registrar();
 		// listar();
 		// buscar(7);
 		// eliminar(5);  listar();
-		 actualizar(7, "Andrea", "Zapata"); listar();
+		 actualizar(7, "Andrea", "Fonseca"); //listar();
 		System.out.println("Fin");
 	}
 

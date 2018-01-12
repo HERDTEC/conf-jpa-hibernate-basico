@@ -77,6 +77,14 @@ La relacion entre el Persistence Unit y un Entity Manager Factory es de uno a un
 
 # CICLO DE VIDA DE JPA
 
+## Eventos del ciclo de vida 
+* @PrePersist
+* @PostPersist
+* @PreUpdate
+* @PostUpdate
+* @PreRemove
+* PostRemove
+
 
 ## CREAR UN PROYECTO JAVA CON JPA 
 1. File >New> Other
